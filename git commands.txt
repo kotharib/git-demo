@@ -1,0 +1,66 @@
+List of Git commands
+pwd :- check your present working directory
+git version :- check the version of git
+
+git config --global user.name "Brijesh Kothari"  :- set the user name in config as "Brijesh Kothari"
+git config --global user.email "kotharibrijesh@msn.com"  :- set the email in config as "kotharibrijesh@msn.com"
+
+git config --global --list  :- view the list of config
+
+git help commit :- see the help page for git commit  (similarly we can use it for other commands too)
+
+git clone https://github.com/kotharib/github-demo.git  :- create the clone of the repository
+git init :- initialize a new repository
+
+git status :- check status
+git add <filename> :- add the file to the git 
+git pull :- pull the changes from the remote repository to local repository.
+git push origin master :- push the committed changes to the remote repository
+git push :- same as above
+
+
+git rm :- delete a file
+
+
+git ls-files :- list the tracked files in the repository 
+git log --oneline --decorate --graph --all :- list the commits in a custom format
+git log --abbrev-commit  :- list the commit with abbreviated SHA-1 value
+git log ae1333...7bhdf3d :- list a range of commits
+git log --since="3 days" :- list the commits over a period of time
+git log --follow -- <filename> :- list all the commits for a particular file
+git show <commit SHA1 value> :- view the details of the commit
+
+git add . :- recursive add files to the staging 
+git add -A :- will also update files that renamed , moved or deleted 
+
+git mv :- rename file
+
+git diff  :- compare working directory vs staged 
+git diff HEAD :- compare working directory vs last commit
+git diff master origin/master :-compare staged HEAD vs  remote repository
+
+git branch -a :- list all branches
+git branch -r :- list all branches in remote repository
+git branch abc :- create abc branch
+git branch -m oldname newname :- rename branch
+git branch -d filenametobedeleted :- delete branch
+
+git checkout -b newbranch :- will create and switch to new branch
+
+git merge <branchname> :- will merge branch
+
+git stash :- stash the current changes and revert to original state
+git stash apply :- apply the changes that were stashed
+git stash drop :- delete the contents in the stash repository
+git stash pop :- git stash apply + git stash drop(apply and delete the contents in the stash repository)
+
+git stash save "somename"  :- stash the changes with a name as "somename"
+git stash list :- check the list of current stash present
+git stash show stash@{1} :- view the stash
+git stash apply stash@{1} :- apply the stash
+git stash drop stash@{1} :- delete the stash
+
+git stash -u :- stash modified and new files
+
+git rebase <branch_to_rebase> :- rebase the branch commit with the current branch
+
